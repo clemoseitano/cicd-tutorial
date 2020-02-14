@@ -17,6 +17,6 @@ public class UnitConverterTest {
 
     @Test
     public void fahrToDeg() {
-        assertEquals(0.1 * 1.0, UnitConverter.fahrToDeg(32));
+        assertEquals(0 * 1.0, UnitConverter.fahrToDeg(32));
     }
 }
