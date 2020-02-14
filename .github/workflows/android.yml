@@ -1,0 +1,17 @@
+name: Android CI
+
+on: [push] # this is the action
+
+jobs:
+  build: # this is the job name
+
+    runs-on: ubuntu-latest # this is the OS of the docker image
+
+    steps: # this is like a class?
+    - uses: actions/checkout@v2 # this is a github import
+    - name: set up JDK 1.8 # this is the title of the step (shown on the console)
+      uses: actions/setup-java@v1 # a subroutine import
+      with:
+        java-version: 1.8 # specify the language version
+    - name: Build with Gradle # this is the step title
+      run: ./gradlew build # this is the actual command (can be bundled into an action)
