@@ -35,10 +35,10 @@ jobs:
 
     steps:
       - name: Checkout project
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Run Instrumented Tests
-      - uses: reactivecircus/android-emulator-runner@v2 # the emulator action
+        uses: reactivecircus/android-emulator-runner@v2 # the emulator action
         with:
           api-level: 29
-      - run: ./gradlew connectedDebugAndroidTest
+          script: ./gradlew connectedDebugAndroidTest
