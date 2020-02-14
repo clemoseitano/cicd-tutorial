@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Instrumented Tests
-        uses: reactivecircus/android-emulator-runner@v2 # the emulator action
+      - uses: reactivecircus/android-emulator-runner@v2 # the emulator action
         with:
           api-level: 29
-          script: ./gradlew connectedDebugAndroidTest
+      - run: ./gradlew connectedDebugAndroidTest
