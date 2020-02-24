@@ -42,3 +42,16 @@ jobs:
         with:
           api-level: 29
           script: ./gradlew connectedDebugAndroidTest
+
+  build-debug-apk: # this is the job name
+
+    runs-on: ubuntu-latest # this is the OS of the docker image
+
+    steps: # this is like a class?
+      - uses: actions/checkout@v2 # this is a git checkout
+      - name: set up JDK 1.8 # this is the title of the step (shown on the console)
+        uses: actions/setup-java@v1 # a subroutine import
+        with:
+          java-version: 1.8 # specify the language version
+      - name: Build with Gradle # this is the step title
+        run: ./gradlew assemble # this is the actual command (can be bundled into an action)
